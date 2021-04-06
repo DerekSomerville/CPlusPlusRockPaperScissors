@@ -10,7 +10,7 @@ public:
     ConsoleOutput() {
 
     }
-    void output(string message) const {
+    void output(string message) const override {
         cout << message;
     }
 };

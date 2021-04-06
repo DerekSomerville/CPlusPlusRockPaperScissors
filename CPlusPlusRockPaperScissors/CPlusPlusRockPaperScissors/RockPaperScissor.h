@@ -1,15 +1,18 @@
 #pragma once
 #include "ConsoleOutput.h"
 #include "ConsoleInput.h"
+#include "RandInput.h"
 #include "Utilities.h"
 #include "ReadDelimitedFile.h"
 #include <string>
 using namespace std;
 class RockPaperScissor {
 private:
+	
+	Output *output;
+	Input *input;
+	Input* randInput;
 	ReadDelimitedFile readDelimitedFile;
-	ConsoleOutput output;
-	ConsoleInput input;
 	Utilities utilities = Utilities();
 
 	string generateRequest(vector<string> listOfItems) {
@@ -38,13 +41,13 @@ private:
 		return readDelimitedFile.getFileData("games.csv");
 	}
 	int getGame(vector<string> games) {
-		output.output(generateRequest(games));
-		int game = input.getInputInt();
+		output->output(generateRequest(games));
+		int game = input->getInputInt();
 		return game;
 	}
 
 	int getComputerWeapon() {
-		return rand() % 3;
+		return randInput->getInputInt();
 	}
 
 	string determineWinner(vector<string> weaponList, int userWeapon, int computerWeapon) {
@@ -81,15 +84,33 @@ private:
 		int customerWeapon = 0;
 		int computerWeapon;
 		while (customerWeapon < weapons.size()) {
-			output.output(generateRequest(weapons));
-			customerWeapon = input.getInputInt();
+			output->output(generateRequest(weapons));
+			customerWeapon = input->getInputInt();
 			computerWeapon = getComputerWeapon();
-			output.output(determineWinner(weapons, customerWeapon, computerWeapon));
+			output->output(determineWinner(weapons, customerWeapon, computerWeapon));
 		}
 
 	}
 public:
+	RockPaperScissor(Output *output,Input *input, Input *randInput) {
+		this->output = output;
+		this->input = input;
+		this->randInput = randInput;
+	}
+
+	void setOutput(Output *output) {
+		this->output = output;
+	}
+	void setInput(Input *input) {
+		this->input = input;
+	}
+	void setRandInput(Input* randInput) {
+		this->randInput = randInput;
+	}
 	RockPaperScissor() {
+		output = new ConsoleOutput();
+		input = new ConsoleInput();
+		randInput = new RandInput();
 	}
 
 	void main() {

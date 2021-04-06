@@ -1,3 +1,5 @@
 ﻿  CPlusPlusRockPaperScissors.cpp
-C:\Users\ds267f\Documents\github\CPlusPlusRockPaperScissors\CPlusPlusRockPaperScissors\CPlusPlusRockPaperScissors\RockPaperScissor.h(83,25): warning C4018: '<': signed/unsigned mismatch
+C:\Users\ds267f\Documents\github\CPlusPlusRockPaperScissors\CPlusPlusRockPaperScissors\CPlusPlusRockPaperScissors\RockPaperScissor.h(86,25): warning C4018: '<': signed/unsigned mismatch
+  RandInput.cpp
+  Generating Code...
   CPlusPlusRockPaperScissors.vcxproj -> C:\Users\ds267f\Documents\github\CPlusPlusRockPaperScissors\CPlusPlusRockPaperScissors\Debug\CPlusPlusRockPaperScissors.exe

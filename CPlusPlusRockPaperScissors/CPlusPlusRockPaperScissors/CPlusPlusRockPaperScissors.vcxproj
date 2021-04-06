@@ -144,6 +144,7 @@
     <ClCompile Include="CPlusPlusRockPaperScissors.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Output.cpp" />
+    <ClCompile Include="RandInput.cpp" />
     <ClCompile Include="ReadDelimitedFile.cpp" />
     <ClCompile Include="RockPaperScissor.cpp" />
     <ClCompile Include="Utilities.cpp" />
@@ -153,6 +154,7 @@
     <ClInclude Include="ConsoleOutput.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Output.h" />
+    <ClInclude Include="RandInput.h" />
     <ClInclude Include="ReadDelimitedFile.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="RockPaperScissor.h" />

@@ -8,7 +8,7 @@ public:
 	ConsoleInput() {
 
 	}
-	string getInputString() const {
+	string getInputString() const override {
 		string result;
 		cin >> result;
 		return result;

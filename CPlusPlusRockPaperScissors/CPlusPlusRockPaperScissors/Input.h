@@ -4,6 +4,8 @@ using namespace std;
 class Input
 {
 public:
+	Input() {}
+	virtual ~Input() {}
 
 	int getInputInt() {
 		string result = "";
